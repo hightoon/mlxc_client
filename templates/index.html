@@ -237,7 +237,7 @@
     padding: 0em;
     position: relative;
     width: 100%;
-    height: 100px;
+    height: 120px;
     margin-bottom: 5px;
     zoom: 1;
   }
@@ -248,7 +248,7 @@
   }
   
   .slide_byline {
-    font-size: 0.8em;
+    font-size: 0.5em;
     display: block;
     text-align: left;
   }
@@ -467,8 +467,8 @@
     <div class="xxxlarge-12 medium-12" id='museum' style="text-align:center; display: none;">
         <div class="image-container"><img id="museumpic" src="/static/commuseum/cake6.jpg" /></div>
         <div class="slide_text">
-          <div class="slide_title">大溪村介绍</div>
-          <div class="slide_byline">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp素有“上有天池如平镜，下有九龙盘街亭；农家青山为依伴，灯光霓虹夜作城。”的大溪村位于安吉县南端，与临安毗邻。
+          <div class="slide_title" id="museum-title">大溪村介绍</div>
+          <div class="slide_byline" id="museum-content">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp素有“上有天池如平镜，下有九龙盘街亭；农家青山为依伴，灯光霓虹夜作城。”的大溪村位于安吉县南端，与临安毗邻。
           面积31.4平方公里。辖大溪、香炉山、桂家、曹家土户、张家、桃树坞、外长龙山、上培、龙池塘、大荷山、里长龙山、市岭、横坑坞等13个自然村。</div>
         </div>
         <div id="museum-carousel" class="flexslider">
@@ -521,8 +521,8 @@
     <div class="xxxlarge-12 medium-12" id='pictures' style="text-align:center; display: none">
         <div class="image-container"><img id="commpic" src="/static/commpics/cake6.jpg" /> </div>
         <div class="slide_text">
-          <div class="slide_title">大溪村介绍</div>
-          <div class="slide_byline">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp素有“上有天池如平镜，下有九龙盘街亭；农家青山为依伴，灯光霓虹夜作城。”的大溪村位于安吉县南端，与临安毗邻。
+          <div class="slide_title" id="pic-title">大溪村介绍</div>
+          <div class="slide_byline" id="pic-content">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp素有“上有天池如平镜，下有九龙盘街亭；农家青山为依伴，灯光霓虹夜作城。”的大溪村位于安吉县南端，与临安毗邻。
           面积31.4平方公里。辖大溪、香炉山、桂家、曹家土户、张家、桃树坞、外长龙山、上培、龙池塘、大荷山、里长龙山、市岭、横坑坞等13个自然村。</div>
         </div>
         <div id="commpics-carousel" class="flexslider">
@@ -861,14 +861,14 @@
         //$("ul#museum-slider-list").empty();
         //console.log(data);
         var fst = $('<li><img src='+'"/'+data[0]['imgurl']+'"'+' />'+'</li>');
-        fst.attr('onclick', 'changeSrc("'+'museumpic'+'",'+'"'+data[0]['imgurl']+'")');
+        fst.attr('onclick', 'changeSrc("'+'museumpic'+'",'+'"'+data[0]['imgurl']+'");'+'$("#museum-title").html("'+data[0]['title']+'");'+'$("#museum-content").html("'+data[0]['content']+'");');
         $("#museum-carousel-list").append(fst);
         $("#museum-carousel-list li:not(:last)").remove();
         for (var i = 1; i < data.length; i++) {
           console.log(data[i]['imgurl']);
           console.log('<li><img src='+'"/'+data[i]['imgurl']+'"'+' />'+'</li>');
           newItem = $('<li><img class="carousel-img" src='+'"/'+data[i]['imgurl']+'"'+' />'+'</li>');
-          newItem.attr('onclick', 'changeSrc("'+'museumpic'+'",'+'"'+data[i]['imgurl']+'")');
+          newItem.attr('onclick', 'changeSrc("'+'museumpic'+'",'+'"'+data[i]['imgurl']+'");'+'$("#museum-title").html("'+data[i]['title']+'");'+'$("#museum-content").html("'+data[i]['content']+'");');
           //$("#museum-slider-list").append(newItem);
           $("#museum-carousel-list").append(newItem);
         }
@@ -934,7 +934,7 @@
         $("#commpics-carousel-list").empty();
         for (var i = 0; i < data.length; i++) {
           newItem = $('<li><img class="carousel-img" src='+'"/'+data[i]['imgurl']+'"'+' />'+'</li>');
-          newItem.attr('onclick', 'changeSrc("'+'commpic'+'",'+'"'+data[i]['imgurl']+'")');
+          newItem.attr('onclick', 'changeSrc("'+'commpic'+'",'+'"'+data[i]['imgurl']+'");'+'$("#pic-title").html("'+data[i]['title']+'");'+'$("#pic-content").html("'+data[i]['content']+'");');
           $("#commpics-carousel-list").append(newItem);
         }
         
@@ -1083,8 +1083,8 @@
     $('#comminfo').height(conHeight*frameRatio/100+180);
     $('#governinfo').height(conHeight*frameRatio/100+150+40);
     $('.flex-video').css('padding-bottom', conHeight*frameRatio/100);
-    $('#commpic').height(conHeight*frameRatio/100-100);
-    $('#museumpic').height(conHeight*frameRatio/100-100);
+    $('#commpic').height(conHeight*frameRatio/100-120);
+    $('#museumpic').height(conHeight*frameRatio/100-120);
     //$('#breaking-img').height(conHeight*frameRatio/100);
     //$('#convinient-img').height(conHeight*frameRatio/100);
     $(document).foundation();
@@ -1118,8 +1118,8 @@
     $('#comminfo').height(conHeight*frameRatio/100+180);
     $('#governinfo').height(conHeight*frameRatio/100+150+40);
     $('.flex-video').css('padding-bottom', conHeight*frameRatio/100);
-    $('#commpic').height(conHeight*frameRatio/100-100);
-    $('#museumpic').height(conHeight*frameRatio/100-100);
+    $('#commpic').height(conHeight*frameRatio/100-120);
+    $('#museumpic').height(conHeight*frameRatio/100-120);
     //$('#breaking-img').height(conHeight*frameRatio/100);
     //$('#convinient-img').height(conHeight*frameRatio/100);
   }

@@ -139,11 +139,23 @@ def museum():
     mupics = []
     folder = os.path.join('static', 'commuseum')
     files = os.listdir(folder)
+    txtfiles = [f for f in files if 'txt' in os.path.splitext(f)[1].lower()]
+    images = [f for f in files if 'txt' not in os.path.splitext(f)[1].lower()]
+    files = zip(txtfiles, images)
     for f in files:
+        txt, img = f
+        with open(os.path.join(folder, txt), 'rb') as txtfd:
+            lns = txtfd.readlines()
+            title = lns[0].strip()
+            content = '<br>'.join([ln.strip() for ln in lns[1:]])
         if sys.platform.startswith('win'):
-            f = f.decode('gbk').encode('utf8')
+            img = img.decode('gbk').encode('utf8')
+        print title
+        print content
         mupics.append({
-            'imgurl': os.path.join(folder, f).replace('\\', '/')
+            'imgurl': os.path.join(folder, img).replace('\\', '/'),
+            'title': title,
+            'content': content,
         })
     js = json.dumps(mupics)
     print js
@@ -182,11 +194,21 @@ def pics():
     pics = []
     folder = os.path.join('static', 'commpics')
     files = os.listdir(folder)
+    txtfiles = [f for f in files if 'txt' in os.path.splitext(f)[1].lower()]
+    images = [f for f in files if 'txt' not in os.path.splitext(f)[1].lower()]
+    files = zip(txtfiles, images)
     for f in files:
+        txt, img = f
+        with open(os.path.join(folder, txt), 'rb') as txtfd:
+            lns = txtfd.readlines()
+            title = lns[0].strip()
+            content = '<br>'.join([ln.strip() for ln in lns[1:]])
         if sys.platform.startswith('win'):
-            f = f.decode('gbk').encode('utf8')
+            img = img.decode('gbk').encode('utf8')
         pics.append({
-            'imgurl': os.path.join(folder, f).replace('\\', '/')
+            'imgurl': os.path.join(folder, img).replace('\\', '/'),
+            'title': title,
+            'content': content
         })
     js = json.dumps(pics)
     print js
