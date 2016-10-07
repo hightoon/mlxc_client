@@ -1,0 +1,1131 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>美丽乡村</title>
+<!--link rel="stylesheet" href="http://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css"-->
+<!--link rel="stylesheet" href="/static/foundation-6.2.3-complete/css/foundation.min.css"-->
+<link rel="stylesheet" href="/static/foundation-6.2.3-complete/css/appnew.css">
+<!--link href='http://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css' rel='stylesheet' type='text/css'-->
+<link href="/static/foundation-icons/foundation-icons.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="/static/js/woothemes-FlexSlider-5a07806/flexslider.css">
+
+<script type="text/javascript" src="/static/js/jquery.min.js"></script>
+
+<style>
+
+  .infopic {
+    /*max-width: 30%;*/
+    width: 150px;
+    height: 100px;
+  }
+
+  .infoqr {
+    /*max-width: 70%;*/
+    width: 120px;
+    height: 120px;
+  }
+
+  img.infoqr, img.infopic {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .infotext {
+    text-align: center;
+  }
+
+  a.expand {
+    width: 100%;
+  }
+  
+  .bin-container {
+    text-align: center;
+  }
+
+  #fullscreen {
+    /*background-color: #CCFB5D;*/
+    background: url('/static/images/content-bg.png');
+    height: 1080px;
+  }
+
+  #topbar {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .sidebar {
+    /*background: url('http://placehold.it/400x100&text=Other cool article');*/
+    background-color: white;
+    background-size: 400px 150px;
+    background-repeat: no-repeat;
+    font-size: 3vw; /*2.5em;*/
+    /*font-weight: bolder;*/
+    text-align: center;
+    border-radius: 15px;
+    height: 2.2em;
+    line-height: 2.2em;
+    vertical-align: middle;
+  }
+  .sidebar>a>i {
+    color: #CCFB5D;
+  }
+  
+  #side-bin {
+    /*margin-bottom: 30px;*/
+  }
+  
+  .myicon {
+    width: 1.2em;
+  }
+  
+  .active {
+    color: #0000A0;
+  }
+  a:hover {color: #0000A0;}
+  
+  #content {
+    margin-left: 0%;
+    margin-right: 0%;
+    padding-right: 0px;
+    height: 800px;
+  }
+  
+  #ad-content, #community {
+    text-align: center;
+  }
+
+  #bin-ind {
+    text-align: right;
+    margin-right: 10%;
+    margin-bottom: 50px;
+  }
+
+  #id-video {
+    padding-top: 5%;
+    padding-bottom: 5%;
+  }
+
+  #video-frame, #comm-video, #governinfo, #commpic, #museumpic {
+    /*width: 99.99%;*/
+    height: 600px;
+    display: ;
+  }
+
+  #commpic, #museumpic {
+    height: 500px;
+    margin-bottom: 10px;
+  }
+  
+  #museumpic, #commpic, #breaking-img, #convinient-img {
+    margin-bottom: 0px;
+  }
+  
+  #breaking-img, #convinient-img {
+    
+  }
+
+  #video-frame, #comm-video {
+    height: 600px;
+  }
+  
+  #info-qr-container {
+    height: 600px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    margin-top:0px;
+    padding-top: 0px;
+  }
+  
+  #comminfo {
+    overflow-y: scroll;
+    margin-bottom: 10px;
+  }
+  
+  .flex-video {
+    padding-left: 0px;
+    padding-bottom: 600px;
+    background-color: black;
+    margin-bottom: 10px;
+  }
+  
+  .carousel-img {
+    height: 50px;
+  }
+  
+  .but-container {
+    text-align: center;
+  }
+  
+
+  #carousel, #comm-carousel, #govern-carousel, #commpics-carousel, #museum-carousel, #breaking-carousel, #convinient-carousel{
+    width: 99.9%;
+    height: 180px;
+    border-radius: 20px;
+    margin-bottom: 0px;
+    background: rgba(76, 175, 80, 0.0);
+    border-width: 0px;
+  }
+  #govern-carousel, #commpics-carousel, #museum-carousel, #breaking-carousel, #convinient-carousel {
+    margin-bottom: 5px;
+  }
+  
+  .flexslider .slides img {
+    /*width: 250px;*/
+    height: 150px;
+  }
+
+  #museum-slider {
+    width: 99%;
+    margin-bottom: 0px;
+  }
+
+  #info-input-label, #phone-input-label, .query {
+    font-size: 20px;
+    font-weight: bolder;
+  }
+
+  #infoquery-form, #result-area {
+    margin-top: 20%;
+  }
+
+  #museum-button {
+    background: url('/static/images/museum.png');
+    background-repeat: no-repeat;
+    border-radius: 5px;
+  }
+  #dance-button {
+    background: url('/static/images/dance.png');
+    background-repeat: no-repeat;
+    border-radius: 5px;
+  }
+  #govern-button {
+    background: url('/static/images/govern.png');
+    background-repeat: no-repeat;
+    border-radius: 5px;
+  }
+  #pic-button {
+    background: url('/static/images/pictures.png');
+    background-repeat: no-repeat;
+    border-radius: 5px;
+  }
+  #museum-button, #dance-button, #govern-button, #pic-button {
+    width: 200px;
+    height: 6em;
+  }
+
+  body{ 
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  #rec-cardno, #unrec-cardno, #harm-cardno {
+    background: transparent;
+    border: none;
+    width: 20;
+  }
+  
+  .slide_text {
+    background-color: transparent;
+    background-color: rgba(0, 0, 0, 0.5);  /* FF3+, Saf3+, Opera 10.10+, Chrome, IE9 */
+    bottom: 0;
+    color: #fff;
+    display: block;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000,endColorstr=#99000000); /* IE6–IE9 */
+    left: 0;
+    padding: 0em;
+    position: relative;
+    width: 100%;
+    height: 100px;
+    margin-bottom: 5px;
+    zoom: 1;
+  }
+  
+  .slide_title {
+    font-size: 1.2em;
+    text-transform: uppercase;
+  }
+  
+  .slide_byline {
+    font-size: 0.8em;
+    display: block;
+    text-align: left;
+  }
+  
+  .image-container {
+    background-color: white;
+  }
+  
+  p.img-text {
+    height: 450px;
+    font-size: 20px;
+    font-family: Microsoft Yahei;
+    text-align: left;
+    overflow-y: scroll;
+  }
+  
+  .text-area {
+    background-color: white;
+  }
+
+</style>
+
+</head>
+
+<body>
+
+<OBJECT ID=PrintStatus  style="display:none"
+	  CLASSID="clsid:044F0BF3-9131-4692-A8FF-DF374BA183F7"
+    codebase="Msprintsdk.ocx#version=1,0,0,0"
+	  width=100
+	  height=100
+	  align=center
+	  hspace=0
+	  vspace=0
+></OBJECT>
+
+<audio id="click-sound" src="/static/sounds/clicksound.mp3" style="display:none"></audio>
+
+<div id="fullscreen">
+
+<header>
+  <div class="row">
+    
+  <!-- logo and ad break -->
+  <div class="topbar" id="topbar">
+    <!--div class="medium-4 columns">
+      <img src="http://placehold.it/450x183&text=LOGO" alt="company logo">
+    </div-->
+    <!--div class="medium-12 columns"-->
+      <img src="/static/images/topbar-bg.png" alt="beautiful country">
+    <!--/div-->
+  </div>
+  <!-- / logo and ad break -->
+  <br>
+  </div>
+
+</header>
+
+<br>
+
+<div class="row" id="content">
+  <!--div class="medium-9 columns" id="threebins" style="display:none"-->
+  <div class="xxxlarge-9 medium-9 columns" id="threebins" style="display:block">
+    <!--p><img src="http://placehold.it/900x488&text=Promoted Article" alt="recyclable"-->
+      <div class="row" id="bin-ind"><img src="/static/images/binind.png" /></div>
+      <div class="xxlarge-4 medium-4 columns bin-container">
+        <p><img src="/static/images/recyclable.png" alt="recyclable" width="50%" onclick="showBinDesc(0);"></p>
+        <p><img src="/static/images/recyclable-ind.png" alt="recyclable" width="50%"></p>
+        <p id="recycle-desc" style="display: none">这是回收的垃圾，例如衣服，鞋子等。
+        <br><strong>请刷卡:</strong>
+        <input type="text" id="rec-cardno" onkeydown="if (event.keyCode == 13) { recordBinUse(this.value); $('#rec-cardno').val(''); hideBinDesc(0); printQrcode(this.value);}"></p>
+      </div>
+      <div class="xxlarge-4 medium-4 columns bin-container">
+        <p><img src="/static/images/unrecyclable.png" alt="unrecyclable" width="50%" onclick="showBinDesc(1);"></p>
+        <p><img src="/static/images/unrecyclable-ind.png" alt="unrecyclable" width="50%"></p>
+        <p id="unrecycle-desc" style="display: none">这是不可回收的垃圾，例如钻石，黄金，白银，等。
+        <br><strong>请刷卡:</strong>
+        <input type="text" id="unrec-cardno" onkeydown="if (event.keyCode == 13) { recordBinUse(this.value); $('#unrec-cardno').val(''); hideBinDesc(1); printQrcode(this.value);}"></p>
+      </div>
+      <div class="xxlarge-4 medium-4 columns bin-container">
+        <p><img src="/static/images/harmful.png" alt="harmful" width="50%" onclick="showBinDesc(2);"></p>
+        <p><img src="/static/images/harmful-ind.png" alt="harmful" width="50%"></p>
+        <p id="harmful-desc" style="display:none">这是有害垃圾，例如电池，手机，相机，电脑，汽车，等。
+        <br><strong>请刷卡:</strong>
+        <input type="text" id="harm-cardno" onkeydown="if (event.keyCode == 13) { recordBinUse(this.value); $('#harm-cardno').val(''); hideBinDesc(2); printQrcode(this.value);}"></p>
+      </div>
+    <!--/p-->
+  </div>
+  <div class="xxxlarge-9 medium-9 columns" id="ad-content" style="display:none">
+    <!--div class="flex-video" id="ad-video"-->
+    <!--div class="xxlarge-12" style="text-align:center;"-->
+        <!--div class="flex-video widescreen vimeo"-->
+        <!--iframe id="video-frame" src="/static/images/frame_placeholder.jpg" 
+        frameborder="2" autoplay=0>
+        </iframe-->
+        <!--/div-->
+        <div class="flex-video">
+          <video id="video-frame" 
+          src="/static/advds/jaychou_01.mp4" controls="controls">
+          </video>
+          <!--iframe id="video-frame" src="/static/images/frame_placeholder.jpg" 
+            frameborder="0" allowfullscreen>
+          </iframe-->
+        </div>
+    <!--/div-->
+    <!--div class="row"-->
+        <div id="carousel" class="flexslider">
+          <ul class="slides" id="ad-video-list">
+          </ul>
+        </div>
+    <!--/div-->
+    <!--/div-->
+  </div>
+
+  <div class="xxxlarge-9 medium-9 columns" id="infosrv" style="display:none">
+    <div class="xxxlarge-12 medium-12" id='breaking' style="text-align:left; display: none">
+        <div class="text-area">
+          <p class="img-text">
+            <img id="breaking-img" src="/static/commpics/cake6.jpg" style="float: left; padding: 10; margin-right: 20px; height:300px;" />
+            <span id="breaking-text">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp水稻测土配方施肥
+一、以土定产
+就是按照土壤肥力来拟定作物的目标产量。目标产量并不是按照经验估计，也不是把其他地区已达到的绝对高产作为本地区的目标产量，更不能从主观愿望出发定一个高指标，
+而是由土壤肥力水平来确定，即按定产经验公式计算。
+定产经验公式是某一作物在不同肥力的土壤上布置田间试验，以不施任何肥料的空白田产量作为土壤肥力的综合指标（X），
+和这一土壤中不同用肥水平下取得最高产量作为这一土壤可能达到的产量指标（Y），取得一系列大量的成对数据以后而得到的回归方程。
+以水稻为例：Y=491.7+0.66X（X为水稻在某丘田的空白产量，Y为水稻在该丘田的目标产量，单位为斤）。这样我县梅溪等上片土壤肥力较好，
+目标产量确定为600-650kg；高禹、良朋等中片土壤肥力中等，目标产量确定为550-600kg；天荒坪、山川等下片土壤肥力一般，目标产量确定为500-600kg；
+按一般单季稻每百公斤籽粒吸收氮素2.2公斤，即上片需氮量为13.2-14.3kg；中片需氮量为12.1-13.2kg；下片需氮11.0-12.1kg。氮肥施用掌握前足、中控、后补。
+二、因缺补缺
+磷、钾及微量元素，有相当大的比重依靠土壤提供,不能和氮一样，按照目标产量来计算需要量。而是本着“足够”的观点,
+用“丰缺指标”法来核定施用量.通过对土壤速效养分的测定，根据作物对这一养分的丰缺指标来决定是否需要某种肥料及其应该用的量。
+全县二熟剂地区冬作—水稻轮作田块一般土壤有效磷中等，冬作空闲地区土壤有效磷缺乏；而全县大部份土壤速效钾都在临界点以下；因此建议二熟剂地区水稻施过磷酸钙15kg/亩，
+作基肥施下；一熟剂地区施过磷酸钙20kg/亩；氯化钾10-15公斤，基追肥分两次施下，一般比例为4：6。
+三、配方肥
+根据多年的田间试验和测土数据，我县确定水稻配方肥有两个，一个是无机型配方（N：P：K=16：8：14），一个是有机型配方（有机质+N：P：K=20+9：6：11）；
+两者配方都是根据土壤情况平衡养分的，前者需要配合秸秆还田或增施有机肥；后者培肥地力和养分平衡两者都有。请农民朋友们选择使用。</span>
+          </p>
+        </div>
+        <div id="breaking-carousel" class="flexslider">
+          <ul class="slides" id="breaking-carousel-list">
+          </ul>
+        </div>
+    </div>
+    
+    <div class="xxxlarge-12 medium-12" id='convinient' style="text-align:center; display: none">
+        <div class="text-area">
+          <p class="img-text">
+            <img id="convinient-img" src="/static/commpics/cake6.jpg" style="float: left; padding: 10; margin-right: 20px; height:300px;" />
+            <span id="convinient-text">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp生态循环农业遍地开花
+稻鳖共生、稻鸭共养、桑—蚕—塘循环、猪—沼—田循环……目前，越来越多的生态循环农业模式在我县涌现，高效利用资源、生产优质农产品，达到了生态化发展农业的目的。 
+然而，生态循环农业并非只是局限于这种小范围的资源循环。去年，我县制定了《安吉县深化现代生态循环农业建设实施方案》，准备用2015年至2017年这三年时间，建成整建制现代生态循环农业示范县。
+时间过半，让我们来了解生态循环农业建设情况。
+生态循环模式多
+平常的龟鳖品种，独特的水稻植株，两者混合在一起，就组成了天子湖镇高庄村的稻鳖共生模式。
+ “从2013年开始养殖，每年的养殖规模都在100多亩。”高庄甲鱼专业合作社负责人谢连贵介绍，一亩田里，七分种稻三分养鳖，不施肥、不打药，甲鱼吃投放的青虾、小杂鱼，以及稻子上的害虫，
+ 这样养出的甲鱼可以卖到20多元/斤，大米可以卖到8元多/斤，亩产效益要比单纯的种、养殖多1000多元。
+经济效益显著提高，生态效益也看得到。谢连贵说，如果全养甲鱼，水深要达到2米，现在水深只需要0.4米左右就可以了，用水量节约了80%，而且稻田没有药、肥污染，水体水质得到保证，
+采用“稻鳖共生”种养后，水稻和甲鱼的发病率都明显下降。
+此外，稻鸭共养、稻鱼共养、稻虾共生等生态养殖模式也得到了相关部门的推广。
+在浙江园中园农林开发有限公司500亩的果蔬基地里，农产品废弃物如剪下的葡萄枝、菜叶等都有了新去处，新修建的废弃物回收处理池将它们发酵，形成有机肥还田，园区里还养殖了土鸡、山羊，
+丰富农业生态循环的基础。
+在其他地方，以收集农业废弃物进行资源化利用、通过多种搭配共养达到限肥限药和采用物理方法杀虫等达到清洁化生产的生态循环生产模式也在蓬勃发展。
+据了解，去年我县已完成了溪龙现代生态循环农业示范区建设，同时完成了宋茗、正新牧业等5个示范主体以及50个示范点的建设，今年目标完成10个示范主体和70个示范点的创建工作。
+三年目标标准高
+ 生态循环农业不仅仅是单个园区内的循环。在传统的狭义理解上，生态循环农业就是农业主体内部的循环，但这已经不符合现代农业发展的需求，
+ 生态循环农业应该构建“主体小循环、园区中循环、县域大循环”的循环利用体系。
+主体小循环就是农业主体内部的生态循环，园区中循环指的是在同一区域内，各个主体相互配套协作而构建出的循环体系。
+在溪龙现代生态循环农业示范区内，90%的家庭从事白茶种植、加工与销售，全村拥有有机茶园4000余亩，并建有国家级标准茶园核心区6000亩，辐射周边12000亩。
+示范区内统一利用生物链自然规律，大幅缩减农药用量至原先的20%，同时和示范区内的正新牧业建立合作关系，该公司养殖产生的猪粪、沼渣、沼液全部供应茶园，建立起“猪——沼——茶”的循环农业模式。
+县域大循环则是更高层次的要求。农药废弃包装物回收处置、秸秆综合利用等，都是实现县域大循环的前提。2015年至2017年我县生态循环农业发展的总体目标要达到“一控、二减、四基本”的要求，
+既控养、减肥、减药以及秸秆综合利用、农药废弃包装物回收处置、病死动物无害化处理、畜禽养殖治理四个基本要求。</span>
+          </p>
+        </div>
+        <div id="convinient-carousel" class="flexslider">
+          <ul class="slides" id="convinient-carousel-list">
+          </ul>
+        </div>
+    </div>
+
+    <div class="row">
+      <div class="xxxlarge-3 medium-3 xxxlarge-offset-3 medium-offset-3 columns">
+        <!--a onclick="showMuseum();" class="button expand" id="museum-button"></a-->
+        <img src="/static/images/breaking.png" onclick="playsound();showBreakingNews();" />
+      </div>
+      <div class="xxxlarge-3 medium-3 columns">
+        <!--a onclick="showDanceVideo();" class="button expand" id="dance-button"></a-->
+        <img src="/static/images/convinient.png" onclick="playsound();showConvinience();" />
+      </div>
+      <div class="xxxlarge-3 medium-3 columns"></div>
+    </div>
+  </div>
+
+  <div class="xxxlarge-9 medium-9 columns" id="community" style="display:none">
+    <!--div class="flex-video" id="ad-video"-->
+    <div class="xxxlarge-12 medium-12" id='dance-video' style="text-align:center; display: ">
+        <!--iframe id="comm-frame"
+        src="/static/images/frame_placeholder.jpg" frameborder="0">
+        </iframe-->
+        <div class="flex-video">
+          <!--iframe id="comm-video" src="/static/advds/mov_bbb.mp4" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowfullscreen ></iframe-->
+          <video controls id="comm-video" src="/static/advds/mov_bbb.mp4" type="video/mp4">
+          Your browser does not support HTML5 video.
+          </video>
+        </div>
+        <!--video controls id="comm-video" src="/static/advds/mov_bbb.mp4" type="video/mp4">
+          Your browser does not support HTML5 video.
+        </video-->
+
+        <div id="comm-carousel" class="flexslider">
+          <ul class="slides" id="comm-carousel-list">
+            
+          </ul>
+        </div>
+    </div>
+
+    <div class="xxxlarge-12 medium-12" id='museum' style="text-align:center; display: none;">
+        <div class="image-container"><img id="museumpic" src="/static/commuseum/cake6.jpg" /></div>
+        <div class="slide_text">
+          <div class="slide_title">大溪村介绍</div>
+          <div class="slide_byline">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp素有“上有天池如平镜，下有九龙盘街亭；农家青山为依伴，灯光霓虹夜作城。”的大溪村位于安吉县南端，与临安毗邻。
+          面积31.4平方公里。辖大溪、香炉山、桂家、曹家土户、张家、桃树坞、外长龙山、上培、龙池塘、大荷山、里长龙山、市岭、横坑坞等13个自然村。</div>
+        </div>
+        <div id="museum-carousel" class="flexslider">
+          <ul class="slides" id="museum-carousel-list">
+          </ul>
+        </div>
+    </div>
+
+    <div class="xxxlarge-12 medium-12" id='government' style="text-align:center; display: none">
+        <!--img id="governinfo" src="/static/commgov/cake6.jpg" />
+        <div id="govern-carousel" class="flexslider">
+          <ul class="slides" id="govern-carousel-list">
+          </ul>
+        </div-->
+      <div id="comminfo">
+        <!--div class="xxxlarge-4 medium-4 columns">
+          <div class="row"><img class="infopic" src="/static/info/cake1.jpg" /></div>
+          <div class="row"><img class="infoqr" src="/static/info/cake1-qr.png" /></div>
+          <div class="row infotext">这是蛋糕</div>
+        </div>
+        <div class="medium-4 xxxlarge-4 columns">
+          <div class="row"><img class="infopic" src="/static/info/cake2.jpg" /></div>
+          <div class="row"><img class="infoqr" src="/static/info/cake2-qr.png" /></div>
+          <div class="row infotext">这是蛋糕</div>
+        </div>
+        <div class="medium-4 xxxlarge-4 columns">
+          <div class="row"><img class="infopic" src="/static/info/cake3.jpg" /></div>
+          <div class="row"><img class="infoqr" src="/static/info/cake3-qr.png" /></div>
+          <div class="row infotext">这是蛋糕</div>
+        </div>
+        <hr>
+        <div class="medium-4 xxxlarge-4 columns">
+          <div class="row"><img class="infopic" src="/static/info/cake4.jpg" /></div>
+          <div class="row"><img class="infoqr" src="/static/info/cake4-qr.png" /></div>
+          <div class="row infotext">这是蛋糕</div>
+        </div>
+        <div class="medium-4 xxxlarge-4 columns">
+          <div class="row"><img class="infopic" src="/static/info/cake5.jpg" /></div>
+          <div class="row"><img class="infoqr" src="/static/info/cake5-qr.png" /></div>
+          <div class="row infotext">这是蛋糕</div>
+        </div>
+        <div class="medium-4 xxxlarge-4 columns">
+          <div class="row"><img class="infopic" src="/static/info/cake6.jpg" /></div>
+          <div class="row"><img class="infoqr" src="/static/info/cake6-qr.png" /></div>
+          <div class="row infotext">这是蛋糕</div>
+        </div-->
+      </div>
+    </div>
+
+    <div class="xxxlarge-12 medium-12" id='pictures' style="text-align:center; display: none">
+        <div class="image-container"><img id="commpic" src="/static/commpics/cake6.jpg" /> </div>
+        <div class="slide_text">
+          <div class="slide_title">大溪村介绍</div>
+          <div class="slide_byline">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp素有“上有天池如平镜，下有九龙盘街亭；农家青山为依伴，灯光霓虹夜作城。”的大溪村位于安吉县南端，与临安毗邻。
+          面积31.4平方公里。辖大溪、香炉山、桂家、曹家土户、张家、桃树坞、外长龙山、上培、龙池塘、大荷山、里长龙山、市岭、横坑坞等13个自然村。</div>
+        </div>
+        <div id="commpics-carousel" class="flexslider">
+          <ul class="slides" id="commpics-carousel-list">
+          </ul>
+        </div>
+    </div>
+
+    <div class="row">
+      <div class="xxxlarge-3 medium-3 columns">
+        <!--a onclick="showMuseum();" class="button expand" id="museum-button"></a-->
+        <img src="/static/images/museum.png" onclick="playsound();showMuseum();" />
+      </div>
+      <div class="xxxlarge-3 medium-3 columns">
+        <!--a onclick="showPics();" class="button expand" id="pic-button"></a-->
+        <img src="/static/images/pictures.png" onclick="playsound();showPics();" />
+      </div>
+      <div class="xxxlarge-3 medium-3 columns">
+        <!--a onclick="showGovern();" class="button expand" id="govern-button"></a-->
+        <img src="/static/images/govern.png" onclick="playsound();showGovern();" />
+      </div>
+      <div class="xxxlarge-3 medium-3 columns">
+        <!--a onclick="showDanceVideo();" class="button expand" id="dance-button"></a-->
+        <img src="/static/images/dance.png" onclick="playsound();showDanceVideo();" />
+      </div>
+    </div>
+  </div>
+
+  <div class="xxxlarge-9 medium-9 columns" id="infoquery" style="display:none">
+    <form action="/user-query" method="post">
+      <div class="row" id="infoquery-form">
+        <div class="xxxlarge-9 medium-9 xxxlarge-offset-1 medium-offset-1 columns">
+          <div class="row">
+            <div class="xxxlarge-3 medium-3 columns">
+              <label for="right-label" class="right"><span id="info-input-label">卡号:</span></label>
+            </div>
+            <div class="xxxlarge-9 medium-9 columns">
+              <input type="text" name="cardno" id="right-label" onkeydown="if (event.keyCode == 13) { return false; }"
+               placeholder="请刷卡!" />
+            </div>
+          </div>
+          <input type="button" value="提交"
+            onclick="$.ajax({url:'/user-query', method:'post', data:{'cardno': $('#right-label').val()}}).done(function(data){fillQueryResults(data);showQueryResult();});">
+        </div>
+      </div>
+    </form>
+  </div>
+  
+  <div class="xxxlarge-9 medium-9 columns" id="queryresult" style="display:none">
+    <div class="row" id="result-area">
+      <div class="xxxlarge-7 medium-7 xxxlarge-offset-3 medium-offset-3 columns">
+        
+        <div class="row">
+          <div class="xxxlarge-3 medium-3 columns">
+            <label for="name-field" class="right"><span class="query">姓名:</span></label>
+          </div>
+          <div class="xxxlarge-9 medium-9 columns">
+            <span id="name-field" class="query">xinchao</span>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="xxxlarge-3 medium-3 columns">
+            <label for="mobile-field" class="right"><span class="query">手机:</span></label>
+          </div>
+          <div class="xxxlarge-9 medium-9 columns">
+            <span id="mobile-field" class="query">15825503332</span>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="xxxlarge-3 medium-3 columns">
+            <label for="rank-field" class="right"><span class="query">排名:</span></label>
+          </div>
+          <div class="xxxlarge-9 medium-9 columns">
+            <span id="rank-field" class="query">100</span>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="xxxlarge-3 medium-3 columns end">
+    <p class="sidebar" id="side-bin"><a onclick="playsound();showBins();" id="bin-menu"><!--i class="step fi-clipboard-notes size-16"></i-->
+      <img src="/static/images/bin-icon.png" class="myicon">&nbsp垃圾分类</a></p><hr>
+    <p class="sidebar"><a onclick="playsound();showAds();" id="ad-menu"><!--i class="step fi-page-copy size-16"></i-->
+      <img src="/static/images/ad-icon.png" class="myicon">&nbsp广告宣传</a></p>
+    <p class="sidebar"><a onclick="playsound();showInfosrv();" id="info-menu"><!--i class="step fi-social-myspace size-16"></i-->
+      <img src="/static/images/info-icon.png" class="myicon">&nbsp村务公开</a></p>
+    <p class="sidebar"><a onclick="playsound();showCommunity();" id="comm-menu"><!--i class="step fi-home size-16"></i-->
+      <img src="/static/images/comm-icon.png" class="myicon">&nbsp社区服务</a></p>
+    <p class="sidebar"><a onclick="playsound();showInfoQuery();" id="query-menu"><!--i class="step fi-page-search size-16"></i-->
+      <img src="/static/images/query-icon.png" class="myicon">&nbsp信息查询</a></p>
+    <button id="fullscreen-button">进入全屏</button>
+  </div>
+</div>
+
+</footer>
+</div>
+</body>
+
+<!--script src="https://code.jquery.com/jquery-2.1.4.min.js"></script-->
+<script src="/static/js/woothemes-FlexSlider-5a07806/node_modules/jquery/dist/jquery.min.js"></script>
+<script src="/static/foundation-6.2.3-complete/js/vendor/foundation.js"></script>
+<!--script src="http://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script-->
+<script src="/static/js/modernizr.js"></script>
+
+<script defer src="/static/js/woothemes-FlexSlider-5a07806/jquery.flexslider.js"></script>
+
+<script>
+
+  function showAds() {
+    document.getElementById('threebins').style.display = 'none';
+    document.getElementById('infosrv').style.display = 'none';
+    document.getElementById('community').style.display = 'none';
+    document.getElementById('ad-content').style.display = '';
+    document.getElementById('infoquery').style.display = 'none';
+    document.getElementById('queryresult').style.display = 'none';
+    $('#carousel').flexslider({
+          animation: "slide",
+          controlNav: false,
+          animationLoop: false,
+          slideshow: false,
+          itemWidth: window.itemWidth,
+          itemMargin: 5,
+          //asNavFor: '#slider'
+    });
+    getAdvideos();
+    $('#ad-menu').addClass('active');
+    $('#bin-menu').removeClass('active');
+    $('#info-menu').removeClass('active');
+    $('#comm-menu').removeClass('active');
+    $('#query-menu').removeClass('active');
+  }
+
+  function showBins() {
+    document.getElementById('threebins').style.display = '';
+    document.getElementById('infosrv').style.display = 'none';
+    document.getElementById('ad-content').style.display = 'none';
+    document.getElementById('community').style.display = 'none';
+    document.getElementById('infoquery').style.display = 'none';
+    document.getElementById('queryresult').style.display = 'none';
+    $('#bin-menu').addClass('active');
+    $('#ad-menu').removeClass('active');
+    $('#info-menu').removeClass('active');
+    $('#comm-menu').removeClass('active');
+    $('#query-menu').removeClass('active');
+  }
+
+  function showInfosrv() {
+    document.getElementById('threebins').style.display = 'none';
+    document.getElementById('infosrv').style.display = '';
+    document.getElementById('ad-content').style.display = 'none';
+    document.getElementById('community').style.display = 'none';
+    document.getElementById('infoquery').style.display = 'none';
+    document.getElementById('queryresult').style.display = 'none';
+    $('#info-menu').addClass('active');
+    $('#comm-menu').removeClass('active');
+    $('#query-menu').removeClass('active');
+    $('#bin-menu').removeClass('active');
+    $('#ad-menu').removeClass('active');
+    showBreakingNews();
+  }
+
+  function showInfoQuery() {
+    document.getElementById('threebins').style.display = 'none';
+    document.getElementById('infosrv').style.display = 'none';
+    document.getElementById('ad-content').style.display = 'none';
+    document.getElementById('community').style.display = 'none';
+    document.getElementById('infoquery').style.display = '';
+    document.getElementById('queryresult').style.display = 'none';
+
+    document.getElementById("right-label").value = '';
+    document.getElementById("right-label").focus();
+    //$('#infoquery').focus();
+    $('#info-menu').removeClass('active');
+    $('#comm-menu').removeClass('active');
+    $('#query-menu').addClass('active');
+    $('#bin-menu').removeClass('active');
+    $('#ad-menu').removeClass('active');
+  }
+  
+  function showQueryResult() {
+    document.getElementById('threebins').style.display = 'none';
+    document.getElementById('infosrv').style.display = 'none';
+    document.getElementById('ad-content').style.display = 'none';
+    document.getElementById('community').style.display = 'none';
+    document.getElementById('infoquery').style.display = 'none';
+    document.getElementById('queryresult').style.display = '';
+    $('#info-menu').removeClass('active');
+    $('#comm-menu').removeClass('active');
+    $('#query-menu').addClass('active');
+    $('#bin-menu').removeClass('active');
+    $('#ad-menu').removeClass('active');
+  }
+
+  function showCommunity() {
+    document.getElementById('threebins').style.display = 'none';
+    document.getElementById('infosrv').style.display = 'none';
+    document.getElementById('ad-content').style.display = 'none';
+    document.getElementById('community').style.display = '';
+    document.getElementById('infoquery').style.display = 'none';
+    document.getElementById('queryresult').style.display = 'none';
+    /*$('#comm-carousel').flexslider({
+          animation: "slide",
+          controlNav: false,
+          animationLoop: false,
+          slideshow: false,
+          itemWidth: 110,
+          itemMargin: 50,
+          asNavFor: '#slider'
+    });*/
+    getDanceVideos();
+    $('#info-menu').removeClass('active');
+    $('#comm-menu').addClass('active');
+    $('#query-menu').removeClass('active');
+    $('#bin-menu').removeClass('active');
+    $('#ad-menu').removeClass('active');
+  }
+
+  //show sub page for community service
+  function showMuseum() {
+    document.getElementById('dance-video').style.display = 'none';
+    document.getElementById('government').style.display = 'none';
+    document.getElementById('pictures').style.display = 'none';
+    document.getElementById('museum').style.display = '';
+    
+    getMuseumPics();
+  }
+
+  function showDanceVideo() {
+    document.getElementById('dance-video').style.display = '';
+    document.getElementById('government').style.display = 'none';
+    document.getElementById('pictures').style.display = 'none';
+    document.getElementById('museum').style.display = 'none';
+
+    getDanceVideos();
+  }
+  
+  function showGovern() {
+    document.getElementById('dance-video').style.display = 'none';
+    document.getElementById('government').style.display = '';
+    document.getElementById('pictures').style.display = 'none';
+    document.getElementById('museum').style.display = 'none';
+    //getGovernInfo();
+    getInfoSrv();
+  }
+  
+  function showPics() {
+    document.getElementById('dance-video').style.display = 'none';
+    document.getElementById('government').style.display = 'none';
+    document.getElementById('pictures').style.display = '';
+    document.getElementById('museum').style.display = 'none';
+    getPics();
+  }
+  
+  function showBreakingNews() {
+    document.getElementById('breaking').style.display = '';
+    document.getElementById('convinient').style.display = 'none';
+    getBreaking();
+  }
+  
+  function showConvinience() {
+    document.getElementById('breaking').style.display = 'none';
+    document.getElementById('convinient').style.display = '';
+    getConvinient();
+  }
+
+  function addItem(imgurl, name, id, src) {
+      newItem = $('<li><img src='+'"'+imgurl+'"'+' />'+name+'</li>');
+      newItem.attr('onclick', 'changeSrc("'+id+'",'+'"'+src+'")');
+      //newItem = $('<li><img src="/static/images/video-icon.png" /><span>美丽安吉</span></li>');
+      $("ul#ad-video-list").append(newItem);
+      //$('#ad-video-list').data('flexslider').addSlide($(newItem));
+  }
+
+  function addDanceItem(imgurl, name, id, src) {
+    newItem = $('<li><img src='+'"'+imgurl+'"'+' />'+name+'</li>');
+    newItem.attr('onclick', 'changeSrc("'+id+'",'+'"'+src+'")');
+    $("ul#comm-carousel-list").prepend(newItem);
+  }
+
+  function getAdvideos() {
+    $('.flexslider').removeData("flexslider");
+    $.ajax({
+      url: "/ad/videos",
+      success: function(data) {
+        if (data) {
+          console.log(data);
+          $('ul#ad-video-list').empty();
+          for (var i = 0; i < data.length; i++) {
+            addItem(data[i].image, data[i].name, data[i].id, data[i].src);
+          }
+          $('#carousel').flexslider({
+                animation: "slide",
+                controlNav: false,
+                animationLoop: false,
+                slideshow: false,
+                itemWidth: window.itemWidth,
+                itemMargin: 5,
+                touch: true,
+          });
+        }
+      },
+      async: true
+    });
+  }
+
+  function getDanceVideos() {
+    $('.flexslider').removeData("flexslider");
+    $.get("/comm/dance", function(data){
+      if (data) {
+        addDanceItem(data[0].image, data[0].name, data[0].id, data[0].src);
+        $("#comm-carousel-list li:not(:last)").remove();
+        for (var i = 1; i < data.length; i++) {
+          addDanceItem(data[i].image, data[i].name, data[i].id, data[i].src);
+        }
+        $('#comm-carousel').flexslider({
+              animation: "slide",
+              controlNav: false,
+              animationLoop: false,
+              slideshow: false,
+              itemWidth: window.itemWidth,
+              itemMargin: 5,
+              touch: true,
+        });
+      }
+    });
+  }
+
+  function getMuseumPics() {
+    $('.flexslider').removeData('flexslider');
+    $.get("/comm/museum", function(data){
+      if (data) {
+        //$("ul#museum-slider-list").empty();
+        //console.log(data);
+        var fst = $('<li><img src='+'"/'+data[0]['imgurl']+'"'+' />'+'</li>');
+        fst.attr('onclick', 'changeSrc("'+'museumpic'+'",'+'"'+data[0]['imgurl']+'")');
+        $("#museum-carousel-list").append(fst);
+        $("#museum-carousel-list li:not(:last)").remove();
+        for (var i = 1; i < data.length; i++) {
+          console.log(data[i]['imgurl']);
+          console.log('<li><img src='+'"/'+data[i]['imgurl']+'"'+' />'+'</li>');
+          newItem = $('<li><img class="carousel-img" src='+'"/'+data[i]['imgurl']+'"'+' />'+'</li>');
+          newItem.attr('onclick', 'changeSrc("'+'museumpic'+'",'+'"'+data[i]['imgurl']+'")');
+          //$("#museum-slider-list").append(newItem);
+          $("#museum-carousel-list").append(newItem);
+        }
+        
+        $('#museum-carousel').flexslider({
+              animation: "slide",
+              controlNav: false,
+              animationLoop: false,
+              slideshow: false,
+              itemWidth: window.itemWidth,
+              itemMargin: 5,
+              touch: true,
+        });
+      }
+    });
+  }
+  
+  function getGovernInfo() {
+    $('.flexslider').removeData('flexslider');
+    $.get("/comm/governinfo", function(data){
+      if (data) {
+        $("#govern-carousel-list").empty();
+        for (var i = 0; i < data.length; i++) {
+          //console.log(data[i]['imgurl']);
+          //console.log('<li><img src='+'"/'+data[i]['imgurl']+'"'+' />'+'</li>');
+          newItem = $('<li><img class="carousel-img" src='+'"/'+data[i]['imgurl']+'"'+' />'+'</li>');
+          newItem.attr('onclick', 'changeSrc("'+'governinfo'+'",'+'"'+data[i]['imgurl']+'");');
+          $("#govern-carousel-list").append(newItem);
+        }
+        
+        $('#govern-carousel').flexslider({
+              animation: "slide",
+              controlNav: false,
+              animationLoop: false,
+              slideshow: false,
+              itemWidth: window.itemWidth,
+              itemMargin: 5,
+              touch: true,
+        });
+      }
+    });
+  }
+  
+  function getInfoSrv() {
+    $.get("/comm/infosrv", function(data){
+      if (data) {
+        $('#comminfo').empty();
+        for (var i=0; i<data.length; i++) {
+          e = $('<div class="xxxlarge-4 medium-4 columns"><div class="row"><img class="infopic" src="'+data[i].infopic+'" /></div>\
+          <div class="row"><img class="infoqr" src="'+data[i].infoqr+'" /></div>\
+          <div class="row infotext">'+data[i].infotext+'</div></div>');
+          console.log(e);
+          $('#comminfo').append(e);
+        }
+      } 
+    });
+  }
+  
+  function getPics() {
+    $('.flexslider').removeData('flexslider');
+    $.get("/comm/pics", function(data){
+      if (data) {
+        $("#commpics-carousel-list").empty();
+        for (var i = 0; i < data.length; i++) {
+          newItem = $('<li><img class="carousel-img" src='+'"/'+data[i]['imgurl']+'"'+' />'+'</li>');
+          newItem.attr('onclick', 'changeSrc("'+'commpic'+'",'+'"'+data[i]['imgurl']+'")');
+          $("#commpics-carousel-list").append(newItem);
+        }
+        
+        $('#commpics-carousel').flexslider({
+              animation: "slide",
+              controlNav: false,
+              animationLoop: false,
+              slideshow: false,
+              itemWidth: window.itemWidth,
+              itemMargin: 5,
+              touch: true,
+        });
+      }
+    });
+  }
+  
+  function getBreaking() {
+    $('.flexslider').removeData('flexslider');
+    $.get("/opengovern/breaking", function(data){
+      if (data) {
+        $("#breaking-carousel-list").empty();
+        for (var i = 0; i < data.length; i++) {
+          //console.log(data[i]['imgurl']);
+          //console.log('<li><img src='+'"/'+data[i]['imgurl']+'"'+' />'+'</li>');
+          newItem = $('<li><img class="carousel-img" src='+'"/'+data[i]['imgurl']+'"'+' />'+'</li>');
+          newItem.attr('onclick', 'changeSrc("'+'breaking-img'+'",'+'"'+data[i]['imgurl']+'");'+'$("#breaking-text").html("'+'&nbsp'.repeat(8)+data[i]['textcontent']+'");');
+          $("#breaking-carousel-list").append(newItem);
+        }
+        
+        $('#breaking-carousel').flexslider({
+              animation: "slide",
+              controlNav: false,
+              animationLoop: false,
+              slideshow: false,
+              itemWidth: window.itemWidth,
+              itemMargin: 5,
+              touch: true,
+        });
+      }
+    });
+  }
+  
+  function getConvinient() {
+    $('.flexslider').removeData('flexslider');
+    $.get("/opengovern/convinient", function(data){
+      if (data) {
+        $("#convinient-carousel-list").empty();
+        for (var i = 0; i < data.length; i++) {
+          //console.log(data[i]['imgurl']);
+          //console.log('<li><img src='+'"/'+data[i]['imgurl']+'"'+' />'+'</li>');
+          newItem = $('<li><img class="carousel-img" src='+'"/'+data[i]['imgurl']+'"'+' />'+'</li>');
+          newItem.attr('onclick', 'changeSrc("'+'convinient-img'+'",'+'"'+data[i]['imgurl']+'");'+'$("#convinient-text").html("'+'&nbsp'.repeat(8)+data[i]['textcontent']+'");');
+          $("#convinient-carousel-list").append(newItem);
+        }
+        
+        $('#convinient-carousel').flexslider({
+              animation: "slide",
+              controlNav: false,
+              animationLoop: false,
+              slideshow: false,
+              itemWidth: window.itemWidth,
+              itemMargin: 5,
+              touch: true,
+        });
+      }
+    });
+  }
+
+  function changeSrc(id, loc) {
+    document.getElementById(id).setAttribute('src', loc);
+  }
+
+  function recordBinUse(cid) {
+    $.get('/binusereport/'+cid, function(result){
+      console.log('post binuse: '+result);
+    });
+  }
+
+  function printerInit() {
+    PrintStatus.SetUsbportauto();
+    PrintStatus.SetInit();
+  }
+
+  function printQrcode(id) {
+    PrintStatus.PrintQrcode(id,15,2,0);
+    PrintStatus.PrintFeedline(14);
+    PrintStatus.PrintCutpaper(0);
+  }
+  
+  function showBinDesc(type) {
+    if (type === 0) {
+      $('#recycle-desc').css('display', '');
+      $('#unrecycle-desc').css('display', 'none');
+      $('#harmful-desc').css('display', 'none');
+      $('#rec-cardno').focus();
+    } else if (type === 1) {
+      $('#recycle-desc').css('display', 'none');
+      $('#unrecycle-desc').css('display', '');
+      $('#harmful-desc').css('display', 'none');
+      $('#unrec-cardno').focus();
+    } else {
+      $('#recycle-desc').css('display', 'none');
+      $('#unrecycle-desc').css('display', 'none');
+      $('#harmful-desc').css('display', '');
+      $('#harm-cardno').focus();
+    }
+  }
+  
+  function hideBinDesc(type) {
+    if (type === 0) $('#recycle-desc').css('display', 'none');
+    else if (type === 1) $('#unrecycle-desc').css('display', 'none');
+    else $('#harmful-desc').css('display', 'none');
+  }
+  
+  function fillQueryResults(data) {
+    if (data) {
+      $('#name-field').html(data.name);
+      $('#mobile-field').html(data.mobile);
+      $('#rank-field').html(data.rank);
+    }
+  }
+  
+  function playsound() {
+    document.getElementById('click-sound').play();
+  }
+
+</script>
+
+<script>
+    console.log($(window).height()-$('#topbar').height());
+    console.log($('#topbar').height());
+    var conHeight = $(window).height()-$('#topbar').height();
+    $('.sidebar').height(conHeight/6);
+    //$('#content').height(conHeight);
+    window.itemWidth = ($('#community').width()-20)/5;
+    //#carousel, #comm-carousel, #govern-carousel, #commpics-carousel, #museum-carousel, #breaking-carousel, #convinient-carousel
+    //$('#breaking-carousel').height(window.itemWidth*3/4);
+    //$('#convinient-carousel').height(window.itemWidth*3/4);
+    //$('.flexslider .slides img').height(150);
+    //$('#breaking-carousel').height(window.itemWidth);
+    //$('#convinient-carousel').height(window.itemWidth);
+    var frameRatio = 70;
+    //$('.flex-video').css('padding-bottom', conHeight*frameRatio/100);
+    $('#video-frame').height(conHeight*frameRatio/100);
+    $('#comm-video').height(conHeight*frameRatio/100);
+    $('#comminfo').height(conHeight*frameRatio/100+180);
+    $('#governinfo').height(conHeight*frameRatio/100+150+40);
+    $('.flex-video').css('padding-bottom', conHeight*frameRatio/100);
+    $('#commpic').height(conHeight*frameRatio/100-100);
+    $('#museumpic').height(conHeight*frameRatio/100-100);
+    //$('#breaking-img').height(conHeight*frameRatio/100);
+    //$('#convinient-img').height(conHeight*frameRatio/100);
+    $(document).foundation();
+    printerInit();
+</script>
+
+<script type="text/javascript">
+  var fullscreenButton = document.getElementById("fullscreen-button");
+  var fullscreenDiv    = document.getElementById("fullscreen");
+  var fullscreenFunc   = fullscreenDiv.requestFullscreen;
+  if (!fullscreenFunc) {
+    ['mozRequestFullScreen',
+     'msRequestFullscreen',
+     'webkitRequestFullScreen'].forEach(function (req) {
+       fullscreenFunc = fullscreenFunc || fullscreenDiv[req];
+     });
+  }
+
+  function enterFullscreen() {
+    fullscreenButton.style.display = "none"; //hide itself
+    fullscreenFunc.call(fullscreenDiv);
+    var conHeight = $(window).height()-$('#topbar').height();
+    $('.sidebar').height(conHeight/6);
+    //$('#content').height(conHeight);
+    window.itemWidth = ($('#community').width()-20)/5;
+    //$('.flexslider .slides img').css('height', '100px');
+    var frameRatio = 70;
+    //$('.flex-video').css('padding-bottom', conHeight*frameRatio/100);
+    $('#video-frame').height(conHeight*frameRatio/100);
+    $('#comm-video').height(conHeight*frameRatio/100);
+    $('#comminfo').height(conHeight*frameRatio/100+180);
+    $('#governinfo').height(conHeight*frameRatio/100+150+40);
+    $('.flex-video').css('padding-bottom', conHeight*frameRatio/100);
+    $('#commpic').height(conHeight*frameRatio/100-100);
+    $('#museumpic').height(conHeight*frameRatio/100-100);
+    //$('#breaking-img').height(conHeight*frameRatio/100);
+    //$('#convinient-img').height(conHeight*frameRatio/100);
+  }
+  fullscreenButton.addEventListener('click', enterFullscreen);
+</script>
+
+<!--script type="text/javascript" src="https://intercom.zurb.com/scripts/zcom.js"></script-->
+
+</html>
