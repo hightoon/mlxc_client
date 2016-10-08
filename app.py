@@ -146,16 +146,14 @@ def museum():
         txt, img = f
         with open(os.path.join(folder, txt), 'rb') as txtfd:
             lns = txtfd.readlines()
-            title = lns[0].strip()
-            content = '<br>'.join([ln.strip() for ln in lns[1:]])
+            title = lns[0].strip('')
+            content = '<br>'.join([ln.strip('') for ln in lns[1:]])
         if sys.platform.startswith('win'):
             img = img.decode('gbk').encode('utf8')
-        print title
-        print content
         mupics.append({
             'imgurl': os.path.join(folder, img).replace('\\', '/'),
             'title': title,
-            'content': content,
+            'content': content
         })
     js = json.dumps(mupics)
     print js
@@ -201,8 +199,8 @@ def pics():
         txt, img = f
         with open(os.path.join(folder, txt), 'rb') as txtfd:
             lns = txtfd.readlines()
-            title = lns[0].strip()
-            content = '<br>'.join([ln.strip() for ln in lns[1:]])
+            title = lns[0].strip('')
+            content = '<br>'.join([ln.strip('') for ln in lns[1:]])
         if sys.platform.startswith('win'):
             img = img.decode('gbk').encode('utf8')
         pics.append({
@@ -272,7 +270,7 @@ def breaking():
     files = zip(txtfiles, imgfiles)
     for f in files:
         with open(os.path.join(folder, f[0]), 'rb') as txtfd:
-            content = ''.join([ln.strip('\n') for ln in txtfd.readlines()])
+            content = '<br>'.join([ln.strip() for ln in txtfd.readlines()])
         f = f[1]
         print f
         if sys.platform.startswith('win'):
@@ -282,7 +280,7 @@ def breaking():
             'textcontent': content,
         })
     js = json.dumps(pics)
-    print js
+    #print js
     resp = Response(js, status=200, mimetype='application/json')
     resp.headers['Link'] = 'http://localhost:5001'
     return resp
@@ -297,7 +295,7 @@ def conv():
     files = zip(txtfiles, imgfiles)
     for f in files:
         with open(os.path.join(folder, f[0]), 'rb') as txtfd:
-            content = ''.join([ln.strip('\n') for ln in txtfd.readlines()])
+            content = '<br>'.join([ln.strip() for ln in txtfd.readlines()])
         f = f[1]
         if sys.platform.startswith('win'):
             f = f.decode('gbk').encode('utf8')
@@ -306,7 +304,7 @@ def conv():
             'textcontent': content,
         })
     js = json.dumps(pics)
-    print js
+    #print js
     resp = Response(js, status=200, mimetype='application/json')
     resp.headers['Link'] = 'http://localhost:5001'
     return resp
