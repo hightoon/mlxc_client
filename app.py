@@ -146,8 +146,8 @@ def museum():
         txt, img = f
         with open(os.path.join(folder, txt), 'rb') as txtfd:
             lns = txtfd.readlines()
-            title = lns[0].strip('')
-            content = '<br>'.join([ln.strip('') for ln in lns[1:]])
+            title = lns[0].strip()
+            content = '<br>'.join([ln.strip() for ln in lns[1:]])
         if sys.platform.startswith('win'):
             img = img.decode('gbk').encode('utf8')
         mupics.append({
@@ -199,8 +199,8 @@ def pics():
         txt, img = f
         with open(os.path.join(folder, txt), 'rb') as txtfd:
             lns = txtfd.readlines()
-            title = lns[0].strip('')
-            content = '<br>'.join([ln.strip('') for ln in lns[1:]])
+            title = lns[0].strip()
+            content = '<br>'.join([ln.strip() for ln in lns[1:]])
         if sys.platform.startswith('win'):
             img = img.decode('gbk').encode('utf8')
         pics.append({
