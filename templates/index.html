@@ -182,8 +182,13 @@
     margin-bottom: 0px;
   }
 
-  #info-input-label, #phone-input-label, .query {
+  #info-input-label, #phone-input-label {
     font-size: 20px;
+    font-weight: bolder;
+  }
+  
+  .query {
+    font-size: 30px;
     font-weight: bolder;
   }
 
@@ -214,6 +219,10 @@
   #museum-button, #dance-button, #govern-button, #pic-button {
     width: 200px;
     height: 6em;
+  }
+  
+  #museum-content, #pic-content {
+    font-size: 1.2em;
   }
 
   body{ 
@@ -560,12 +569,12 @@
               <label for="right-label" class="right"><span id="info-input-label">卡号:</span></label>
             </div>
             <div class="xxxlarge-9 medium-9 columns">
-              <input type="text" name="cardno" id="right-label" onkeydown="if (event.keyCode == 13) { return false; }"
+              <input type="text" name="cardno" id="right-label" onkeydown="if (event.keyCode == 13) { $.ajax({url:'/user-query', method:'post', data:{'cardno': $('#right-label').val()}}).done(function(data){fillQueryResults(data);showQueryResult();}); return false;}"
                placeholder="请刷卡!" />
             </div>
           </div>
-          <input type="button" value="提交"
-            onclick="$.ajax({url:'/user-query', method:'post', data:{'cardno': $('#right-label').val()}}).done(function(data){fillQueryResults(data);showQueryResult();});">
+          <!--input type="button" value="提交"
+            onclick="$.ajax({url:'/user-query', method:'post', data:{'cardno': $('#right-label').val()}}).done(function(data){fillQueryResults(data);showQueryResult();});"-->
         </div>
       </div>
     </form>
@@ -576,28 +585,37 @@
       <div class="xxxlarge-7 medium-7 xxxlarge-offset-3 medium-offset-3 columns">
         
         <div class="row">
-          <div class="xxxlarge-3 medium-3 columns">
+          <div class="xxxlarge-4 medium-4 columns">
             <label for="name-field" class="right"><span class="query">姓名:</span></label>
           </div>
-          <div class="xxxlarge-9 medium-9 columns">
+          <div class="xxxlarge-8 medium-8 columns">
             <span id="name-field" class="query">xinchao</span>
           </div>
         </div>
         
         <div class="row">
-          <div class="xxxlarge-3 medium-3 columns">
+          <div class="xxxlarge-4 medium-4 columns">
             <label for="mobile-field" class="right"><span class="query">手机:</span></label>
           </div>
-          <div class="xxxlarge-9 medium-9 columns">
+          <div class="xxxlarge-8 medium-8 columns">
             <span id="mobile-field" class="query">15825503332</span>
           </div>
         </div>
         
         <div class="row">
-          <div class="xxxlarge-3 medium-3 columns">
+          <div class="xxxlarge-4 medium-4 columns">
+            <label for="count-field" class="right"><span class="query">投递次数:</span></label>
+          </div>
+          <div class="xxxlarge-8 medium-8 columns">
+            <span id="count-field" class="query">18</span>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="xxxlarge-4 medium-4 columns">
             <label for="rank-field" class="right"><span class="query">排名:</span></label>
           </div>
-          <div class="xxxlarge-9 medium-9 columns">
+          <div class="xxxlarge-8 medium-8 columns">
             <span id="rank-field" class="query">100</span>
           </div>
         </div>
@@ -1035,6 +1053,7 @@
   function printQrcode(id) {
     PrintStatus.PrintQrcode(id,15,2,0);
     PrintStatus.PrintFeedline(14);
+    PrintStatus.PrintMarkpositioncut();
     PrintStatus.PrintCutpaper(0);
   }
   
@@ -1065,8 +1084,10 @@
   
   function fillQueryResults(data) {
     if (data) {
+      console.log(data.count);
       $('#name-field').html(data.name);
       $('#mobile-field').html(data.mobile);
+      $('#count-field').html(data.count);
       $('#rank-field').html(data.rank);
     }
   }
