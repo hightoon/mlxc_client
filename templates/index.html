@@ -326,21 +326,21 @@
       <div class="xxlarge-4 medium-4 columns bin-container">
         <p><img src="/static/images/recyclable.png" alt="recyclable" width="50%" onclick="showBinDesc(0);"></p>
         <p><img src="/static/images/recyclable-ind.png" alt="recyclable" width="50%"></p>
-        <p id="recycle-desc" style="display: none">这是回收的垃圾，例如衣服，鞋子等。
+        <p id="recycle-desc" style="display: none">这是回收的垃圾，包括金属、塑料、玻璃、硬质纸张等。
         <br><strong>请刷卡:</strong>
         <input type="text" id="rec-cardno" onkeydown="if (event.keyCode == 13) { recordBinUse(this.value); $('#rec-cardno').val(''); hideBinDesc(0); printQrcode(this.value);}"></p>
       </div>
       <div class="xxlarge-4 medium-4 columns bin-container">
         <p><img src="/static/images/unrecyclable.png" alt="unrecyclable" width="50%" onclick="showBinDesc(1);"></p>
         <p><img src="/static/images/unrecyclable-ind.png" alt="unrecyclable" width="50%"></p>
-        <p id="unrecycle-desc" style="display: none">这是不可回收的垃圾，例如钻石，黄金，白银，等。
+        <p id="unrecycle-desc" style="display: none">这是不可回收的垃圾，包括灰尘、烟头、卫生纸及其他无法分辨垃圾。
         <br><strong>请刷卡:</strong>
         <input type="text" id="unrec-cardno" onkeydown="if (event.keyCode == 13) { recordBinUse(this.value); $('#unrec-cardno').val(''); hideBinDesc(1); printQrcode(this.value);}"></p>
       </div>
       <div class="xxlarge-4 medium-4 columns bin-container">
         <p><img src="/static/images/harmful.png" alt="harmful" width="50%" onclick="showBinDesc(2);"></p>
         <p><img src="/static/images/harmful-ind.png" alt="harmful" width="50%"></p>
-        <p id="harmful-desc" style="display:none">这是有害垃圾，例如电池，手机，相机，电脑，汽车，等。
+        <p id="harmful-desc" style="display:none">这是有害垃圾，例如电池、温度计、油漆桶、药物、化妆品等。
         <br><strong>请刷卡:</strong>
         <input type="text" id="harm-cardno" onkeydown="if (event.keyCode == 13) { recordBinUse(this.value); $('#harm-cardno').val(''); hideBinDesc(2); printQrcode(this.value);}"></p>
       </div>
@@ -657,6 +657,9 @@
     $('#info-menu').removeClass('active');
     $('#comm-menu').removeClass('active');
     $('#query-menu').removeClass('active');
+    
+    document.getElementById('comm-video').pause();
+    document.getElementById('video-frame').pause();
   }
 
   function showInfosrv() {
@@ -671,7 +674,9 @@
     $('#query-menu').removeClass('active');
     $('#bin-menu').removeClass('active');
     $('#ad-menu').removeClass('active');
-    showBreakingNews();
+    showBreakingNews(); 
+    document.getElementById('comm-video').pause();
+    document.getElementById('video-frame').pause();
   }
 
   function showInfoQuery() {
@@ -690,6 +695,8 @@
     $('#query-menu').addClass('active');
     $('#bin-menu').removeClass('active');
     $('#ad-menu').removeClass('active');
+    document.getElementById('comm-video').pause();
+    document.getElementById('video-frame').pause();
   }
   
   function showQueryResult() {
@@ -704,6 +711,9 @@
     $('#query-menu').addClass('active');
     $('#bin-menu').removeClass('active');
     $('#ad-menu').removeClass('active');
+    
+    document.getElementById('comm-video').pause();
+    document.getElementById('video-frame').pause();
   }
 
   function showCommunity() {
@@ -728,6 +738,9 @@
     $('#query-menu').removeClass('active');
     $('#bin-menu').removeClass('active');
     $('#ad-menu').removeClass('active');
+    
+    document.getElementById('comm-video').pause();
+    document.getElementById('video-frame').pause();
   }
 
   //show sub page for community service
@@ -738,6 +751,8 @@
     document.getElementById('museum').style.display = '';
     
     getMuseumPics();
+    
+    document.getElementById('comm-video').pause();
   }
 
   function showDanceVideo() {
@@ -747,6 +762,8 @@
     document.getElementById('museum').style.display = 'none';
 
     getDanceVideos();
+    
+    //document.getElementById('comm-video').pause();
   }
   
   function showGovern() {
@@ -756,6 +773,7 @@
     document.getElementById('museum').style.display = 'none';
     //getGovernInfo();
     getInfoSrv();
+    document.getElementById('comm-video').pause();
   }
   
   function showPics() {
@@ -764,6 +782,8 @@
     document.getElementById('pictures').style.display = '';
     document.getElementById('museum').style.display = 'none';
     getPics();
+    
+    document.getElementById('comm-video').pause();
   }
   
   function showBreakingNews() {
