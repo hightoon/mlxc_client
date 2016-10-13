@@ -973,7 +973,7 @@
         for (var i = 0; i < data.length; i++) {
           //console.log(data[i]['imgurl']);
           //console.log('<li><img src='+'"/'+data[i]['imgurl']+'"'+' />'+'</li>');
-          newItem = $('<li><img class="carousel-img" src='+'"/'+data[i]['imgurl']+'"'+' />'+'</li>');
+          newItem = $('<li style="text-align:center;"><img class="carousel-img" src='+'"/'+data[i]['imgurl']+'"'+' />'+data[i]['title']+'</li>');
           newItem.attr('onclick', 'changeSrc("'+'breaking-img'+'",'+'"'+data[i]['imgurl']+'");'+'$("#breaking-text").html("'+'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'+data[i]['textcontent']+'");');
           $("#breaking-carousel-list").append(newItem);
         }
@@ -1002,7 +1002,7 @@
         for (var i = 0; i < data.length; i++) {
           //console.log(data[i]['imgurl']);
           //console.log('<li><img src='+'"/'+data[i]['imgurl']+'"'+' />'+'</li>');
-          newItem = $('<li><img class="carousel-img" src='+'"/'+data[i]['imgurl']+'"'+' />'+'</li>');
+          newItem = $('<li class="att-text"><img class="carousel-img" src='+'"/'+data[i]['imgurl']+'"'+' />'+data[i]['title']+'</li>');
           newItem.attr('onclick', 'changeSrc("'+'convinient-img'+'",'+'"'+data[i]['imgurl']+'");'+'$("#convinient-text").html("'+'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'+data[i]['textcontent']+'");');
           $("#convinient-carousel-list").append(newItem);
         }
