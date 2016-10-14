@@ -270,14 +270,16 @@ def breaking():
     files = zip(txtfiles, imgfiles)
     for f in files:
         with open(os.path.join(folder, f[0]), 'rb') as txtfd:
-            content = '<br>'.join([ln.strip() for ln in txtfd.readlines()])
+            lns = txtfd.readlines()
+            content = '<br>'.join([ln.strip() for ln in lns])
+            title = lns[0].strip()
         f = f[1]
-        print f
         if sys.platform.startswith('win'):
             f = f.decode('gbk').encode('utf8')
         pics.append({
             'imgurl': os.path.join(folder, f).replace('\\', '/'),
             'textcontent': content,
+            'title': title,
         })
     js = json.dumps(pics)
     #print js
@@ -295,13 +297,16 @@ def conv():
     files = zip(txtfiles, imgfiles)
     for f in files:
         with open(os.path.join(folder, f[0]), 'rb') as txtfd:
-            content = '<br>'.join([ln.strip() for ln in txtfd.readlines()])
+            lns = txtfd.readlines()
+            content = '<br>'.join([ln.strip() for ln in lns])
+            title = lns[0].strip()
         f = f[1]
         if sys.platform.startswith('win'):
             f = f.decode('gbk').encode('utf8')
         pics.append({
             'imgurl': os.path.join(folder, f).replace('\\', '/'),
             'textcontent': content,
+            'title': title,
         })
     js = json.dumps(pics)
     #print js
