@@ -819,7 +819,8 @@
       url: "/ad/videos",
       success: function(data) {
         if (data) {
-          console.log(data);
+          //console.log(data);
+          document.getElementById('video-frame').setAttribute('src', data[0].src);
           $('ul#ad-video-list').empty();
           for (var i = 0; i < data.length; i++) {
             addItem(data[i].image, data[i].name, data[i].id, data[i].src);
@@ -843,6 +844,7 @@
     $('.flexslider').removeData("flexslider");
     $.get("/comm/dance", function(data){
       if (data) {
+        document.getElementById('comm-video').setAttribute('src', data[data.length-1].src);
         addDanceItem(data[0].image, data[0].name, data[0].id, data[0].src);
         $("#comm-carousel-list li:not(:last)").remove();
         for (var i = 1; i < data.length; i++) {
